@@ -34,22 +34,19 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-wrap gap-4 mb-16">
-            {/* Connected to Experience Section */}
-            <a 
-              href="#experience" 
-              className="bg-accent text-bg px-8 py-3.5 rounded-lg font-bold flex items-center gap-2 hover:bg-accent/90 transition-all hover:translate-y-[-2px] cursor-pointer no-underline"
-            >
+              <a 
+              href="./#experience" 
+              className="bg-accent text-bg px-8 py-3.5 rounded-lg font-bold flex items-center gap-2 hover:bg-accent/90 transition-all hover:translate-y-[-2px] cursor-pointer"
+              >
               View My Work <ArrowRight className="w-4 h-4" />
-            </a>
-
-            {/* Connected to Contact Section */}
-            <a 
-              href="#contact" 
-              className="bg-white-clean/5 border border-white-clean/10 px-8 py-3.5 rounded-lg font-bold flex items-center gap-2 hover:bg-white-clean/10 transition-all hover:translate-y-[-2px] cursor-pointer no-underline"
-            >
+              </a>
+              <a 
+              href="./#contact" 
+              className="bg-white-clean/5 border border-white-clean/10 px-8 py-3.5 rounded-lg font-bold flex items-center gap-2 hover:bg-white-clean/10 transition-all hover:translate-y-[-2px] cursor-pointer"
+              >
               Contact Me <PlayCircle className="w-4 h-4 rotate-[-30deg]" />
-            </a>
-          </div>
+              </a>
+            </div>
 
           <div className="flex flex-wrap gap-x-12 gap-y-6 pt-10 border-t border-white-clean/5">
             <a href={`tel:${PROFILE.phone}`} className="flex items-center gap-3 text-sm text-text-muted hover:text-white-clean transition-colors">
