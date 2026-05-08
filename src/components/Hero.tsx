@@ -11,7 +11,7 @@ export default function Hero() {
            animate={{ opacity: 1, y: 0 }}
            transition={{ duration: 0.5 }}
         >
-          <div className="glass-pill mb-8">
+          <div className="glass-pill mb-8 inline-flex items-center gap-2">
             <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
             {PROFILE.status}
           </div>
@@ -30,16 +30,25 @@ export default function Hero() {
           </div>
 
           <p className="text-xl text-text-muted mb-10 max-w-2xl leading-relaxed">
-            {PROFILE.about.description.split('\n')[0]}
+            {PROFILE.about?.description?.split('\n')[0] || "Welcome to my portfolio."}
           </p>
 
           <div className="flex flex-wrap gap-4 mb-16">
-            <button className="bg-accent text-bg px-8 py-3.5 rounded-lg font-bold flex items-center gap-2 hover:bg-accent/90 transition-all hover:translate-y-[-2px] cursor-pointer">
+            {/* Connected to Experience Section */}
+            <a 
+              href="#experience" 
+              className="bg-accent text-bg px-8 py-3.5 rounded-lg font-bold flex items-center gap-2 hover:bg-accent/90 transition-all hover:translate-y-[-2px] cursor-pointer no-underline"
+            >
               View My Work <ArrowRight className="w-4 h-4" />
-            </button>
-            <button className="bg-white-clean/5 border border-white-clean/10 px-8 py-3.5 rounded-lg font-bold flex items-center gap-2 hover:bg-white-clean/10 transition-all hover:translate-y-[-2px] cursor-pointer">
+            </a>
+
+            {/* Connected to Contact Section */}
+            <a 
+              href="#contact" 
+              className="bg-white-clean/5 border border-white-clean/10 px-8 py-3.5 rounded-lg font-bold flex items-center gap-2 hover:bg-white-clean/10 transition-all hover:translate-y-[-2px] cursor-pointer no-underline"
+            >
               Contact Me <PlayCircle className="w-4 h-4 rotate-[-30deg]" />
-            </button>
+            </a>
           </div>
 
           <div className="flex flex-wrap gap-x-12 gap-y-6 pt-10 border-t border-white-clean/5">

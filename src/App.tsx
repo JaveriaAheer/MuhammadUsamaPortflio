@@ -17,11 +17,18 @@ export default function App() {
     <div className="min-h-screen bg-bg text-white-clean selection:bg-accent selection:text-bg">
       <Navbar />
       <main>
+        {/* id="home" is handled inside the Hero component */}
         <Hero />
+        
+        {/* These components should have the IDs inside their respective files */}
         <About />
+        
         <Experience />
+        
         <Skills />
+        
         <EducationCertifications />
+        
         <Contact />
       </main>
       <Footer />
