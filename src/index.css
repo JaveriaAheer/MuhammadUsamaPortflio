@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0a1628;
+  --color-card: #121f33;
+  --color-accent: #c9a84c;
+  --color-accent-muted: rgba(201, 168, 76, 0.15);
+  --color-text-muted: #94a3b8;
+  --color-white-clean: #f5f5f5;
+  
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-bg text-white-clean font-sans antialiased;
+  }
+}
+
+.gradient-card {
+  @apply bg-card border border-accent/10 rounded-xl relative overflow-hidden;
+  background: linear-gradient(145deg, rgba(21, 27, 40, 1), rgba(21, 27, 40, 0.8));
+}
+
+.timeline-dot {
+  @apply absolute left-0 top-0 w-12 h-12 rounded-lg bg-card border border-accent/20 flex items-center justify-center text-accent z-10;
+}
+
+.glass-pill {
+  @apply bg-accent/10 border border-accent/20 text-accent px-4 py-1.5 rounded-full text-xs font-medium inline-flex items-center gap-2;
+}
